@@ -1,18 +1,19 @@
 .wrapper{
-	max-width: 1540px;
-	width: 100%;
+/*	max-width: 1540px;
+	width: 100%;*/
 }
-.small-header{
+/*.small-header{
 	max-width: 1170px;
 	width: 95%;
 	height: 60px;
 	margin: auto;
-}
-.small-header ul{
+}*/
+/*.small-header ul{
 	display: inline-block;
-}
+}*/
 ul.contacts{
 	padding-left: 30px;
+	border: solid 1px green;
 }
 .contacts li {
 	display: inline-block;
@@ -43,55 +44,57 @@ ul.contacts{
 }
 
 ul.social{
-	float: right;
-	padding-left: 0;
+	/*float: right;*/
+	/*padding-left: 0;*/
+	border: solid 1px green;
+	text-align: right;
 }
 .social li {
 	display: inline-block;
 	margin-right: 10px;
-	list-style: none;
+	list-style-type: none;
 }
 .social li:last-child {
 	margin-right: 0;
 }
 .big-header {
-	height: 121px;
-	max-width: 1170px;
-	width: 95%;
-	margin: auto;
+	height: 120px;
+/*	max-width: 1170px;*/
+	/*width: 95%;*/
+	/*margin: auto;*/
 }
 h1 {
-	display: inline-block;
+	/*display: inline-block;*/
 	width: 120px;
 	height: 41px;
-	color: transparent;
+	color: black;
 	font-size: 10px;
 	background: url(../img/shopy_logo.png) no-repeat;
 	vertical-align: top;
-	margin-top: 40px;
+/*	margin-top: 40px;
 	margin-left: 0;
-	margin-right: 0;
+	margin-right: 0;*/
 }
-.menu,
-.menu ul,
-.menu ul li {
+/*.menu,*/
+/*.menu ul,*/
+/*.menu ul li {
 	display: inline-block;
 	vertical-align: top;
 	font-family: HarmoniaSansProCyr, Arial, sans-serif;
 	font-size: 16px;
 	font-weight: normal;
 	margin-top: 16px;
-}
-.menu {
+}*/
+/*.menu {
 	width: calc(100% - 125px);
 	margin-left: 0;
 	margin-right: 0;
-}
-ul.links {
+}*/
+/*ul.links {
 	padding-left: 35px;
-}
+}*/
 .links li {
-	margin-left: 40px;
+	/*margin-left: 40px;*/
 	color: #34404b;
 }
 .links a,
@@ -109,7 +112,7 @@ ul.links {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	margin-left: 25px;
+	/*margin-left: 25px;*/
 }
 .search {
 	background: url(../img/header_search.png) no-repeat;
@@ -124,9 +127,9 @@ button.cart {
 	width: 26px;
 	background: url(../img/header_cart.png) no-repeat;
 }
-ul.capabilities {
+/*ul.capabilities {
 	float: right;
-}
+}*/
 .cart-inner {
 	/*display: none;*/
 	width: 18px;
