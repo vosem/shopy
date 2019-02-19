@@ -25,29 +25,8 @@ div.product-img-thumbnails {
 	height: 70px;
 	margin-left: 15px;
 }*/
-/*.product-img:hover::before,*/
-/*.img-active::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 1;
-	background-color: rgba(254, 76, 0, 0.85);
-}
-.product-img:first-child {
-	margin-left: 0;
-}*/
-.boots {
-	background: url("../img/thumbnails_boots_img.png") no-repeat center;
-}
-.trousers {
-	background: url("../img/thumbnails_trousers_img.png") no-repeat center;
-}
-.jacket {
-	background: url("../img/thumbnails_jacket_img.png") no-repeat center;
-}
+
+
 /*.product-details {
 	display: inline-block;
 	max-width: 615px;

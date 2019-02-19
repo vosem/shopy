@@ -2,7 +2,7 @@ let imageThumbnails = Array.from(document.getElementsByClassName('product-img'))
 let productBigImages = [
 	'url(\"assets/img/thumbnails_boots_img.png\") center no-repeat',
 	'url(\"assets/img/thumbnails_trousers_img.png\") center no-repeat',
-	'url(\"assets/img/big_product_img.png\") center'
+	'url(\"assets/img/big_product_img.png\") center no-repeat'
 ];
 let bigProductImg = document.getElementsByClassName('big-product-img')[0];
 
