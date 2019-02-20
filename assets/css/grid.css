@@ -55,6 +55,7 @@ ul.capabilities {
 .product-image {
   display: grid;
   grid-template-rows: 7fr 3fr;
+  grid-row-gap: 45px;
 }
 
 div.big-product-img {
@@ -101,10 +102,11 @@ div.big-product-img {
 
 .product-details {
   display: grid;
-  grid-template-rows: repeat(5, max-content);
+  grid-template-rows: repeat(4, max-content);
+  align-content: stretch;
 }
 .product-details h2 {
-  margin: -15px 0 -10px 0;
+  margin: -15px 0 -5px 0;
   padding: 0;
   align-self: top;
   text-transform: uppercase;
@@ -120,6 +122,7 @@ div.big-product-img {
   color: #3c4751;
 }
 .product-details div.product-description {
+  padding-top: 10px;
   line-height: 1.9;
   font-family: HarmoniaSansProCyr, Arial, serif;
   font-weight: 400;
@@ -128,6 +131,116 @@ div.big-product-img {
 }
 .product-details div.product-description p {
   margin: 0;
+}
+.product-details form.product-order {
+  padding-top: 55px;
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+}
+.product-details form.product-order .product-options {
+  display: grid;
+  grid-template-columns: max-content minmax(max-content, auto);
+  align-items: center;
+}
+.product-details form.product-order .product-options .product-size {
+  display: grid;
+  grid-template-columns: max-content minmax(max-content, auto);
+  align-items: center;
+}
+.product-details form.product-order .product-options .product-size span {
+  font-family: HarmoniaSansProCyr, Arial, serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #34404b;
+}
+.product-details form.product-order .product-options .product-size .product-size-types {
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  column-gap: 5px;
+  list-style-type: none;
+}
+.product-details form.product-order .product-options .product-size .product-size-types label {
+  font-family: HarmoniaSansProCyr, Arial, serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #34404b;
+  cursor: pointer;
+}
+.product-details form.product-order .product-options .product-size .product-size-types .radio {
+  display: none;
+}
+.product-details form.product-order .product-options .product-size .product-size-types .radio:checked + label {
+  font-size: 18px;
+  color: #ff5912;
+}
+.product-details form.product-order .product-options .product-size .product-size-types .product-size-types span {
+  margin: 0 2px;
+}
+.product-details form.product-order .product-quantity {
+  justify-self: right;
+  font-family: HarmoniaSansProCyr, Arial, serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #34404b;
+}
+.product-details form.product-order .product-quantity span {
+  margin-right: 10px;
+}
+.product-details form.product-order .product-quantity #quantity-input {
+  width: 20px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-family: HarmoniaSansProCyr, Arial, serif;
+  color: #ff5912;
+  font-weight: 600;
+  font-size: 18px;
+}
+.product-details form.product-order .product-quantity .quantity-button {
+  font-family: HarmoniaSansProCyr, Arial, serif;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 18px;
+  color: #59626b;
+  cursor: pointer;
+}
+.product-details form.product-order .product-footer-line {
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: max-content minmax(max-content, auto);
+  align-items: center;
+}
+.product-details form.product-order .product-footer-line .price {
+  font-family: HarmoniaSansProCyr, Arial, serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #34404b;
+}
+.product-details form.product-order .product-footer-line .product-actions {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-self: right;
+  align-items: center;
+  column-gap: 1.5vw;
+}
+.product-details form.product-order .product-footer-line .product-actions .product-action-icons a {
+  margin-left: 20px;
+}
+.product-details form.product-order .product-footer-line .product-actions .order-button {
+  width: 135px;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  background-color: #ff5912;
+  font-family: HarmoniaSansProCyr, Arial, serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=grid.css.map */
