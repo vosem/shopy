@@ -1,3 +1,4 @@
+$font-size-regular: 16px;
 .wrapper {
   display: grid;
   grid-template-rows: 1fr 3fr;
@@ -12,30 +13,48 @@
 .small-header {
   display: grid;
   grid-template-columns: max-content minmax(max-content, auto);
-  border: solid 1px green;
   ul.contacts {
     padding-left: 30px;
-    border: solid 1px green;
-    li {
-      display: inline-block;
-      font-family: HarmoniaSansProCyr, Arial, serif;
-      font-weight: 400;
-      font-size: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-column-gap: 40px;
+    list-style: none;
+    align-items: center;
+    font-family: HarmoniaSansProCyr, Arial, serif;
+    font-weight: 400;
+    font-size: 12px;
+    .contacts a,
+    .contacts a:visited {
+      position: relative;
+      text-decoration: none;
+      color: #34404b;
+    }
+    .mail a:before {
+      content: url(../img/contacts_mail.png);
+      position: absolute;
+      top: 1px;
+      left: -30px;
+    }
+    .phone a:before {
+      content: url(../img/contacts_phone.png);
+      position: absolute;
+      left: -20px;
     }
   }
   ul.social {
-    border: solid 1px green;
     justify-self: right;
-    li {
-      display: inline-block;
-      margin-left: 10px;
-    }
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    grid-column-gap: 20px;
+    list-style: none;
+    align-items: center;
   }
 }
 
 .big-header {
   grid-column-start: 1;
   grid-column-end: -1;
+  height: 120px;
   display: grid;
   align-items: center;
   grid-template-columns: max-content max-content minmax(max-content, auto);
@@ -47,13 +66,22 @@
     font-size: 10px;
     background: url(../img/shopy_logo.png) no-repeat;
   }
+  .links a,
+  .links a:visited {
+    text-decoration: none;
+    color: #34404b;
+  }
+  .links a:hover,
+  .links a:active {
+    color: #ff5912;
+  }
 }
 nav {
   display: grid;
   grid-template-columns: repeat(5, max-content);
   column-gap: 2vw;
   font-family: HarmoniaSansProCyr, Arial, sans-serif;
-  font-size: 16px;
+  font-size: $font-size-regular;
   font-weight: normal;
 }
 ul.capabilities {
@@ -63,6 +91,42 @@ ul.capabilities {
   grid-column-gap: 20px;
   list-style-type: none;
   justify-self: end;
+}
+.capabilities button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.search {
+  background: url(../img/header_search.png) no-repeat;
+}
+.user {
+  background: url(../img/header_user.png) no-repeat;
+}
+.cart-container {
+  position: relative;
+}
+button.cart {
+  width: 26px;
+  background: url(../img/header_cart.png) no-repeat;
+}
+.cart-inner {
+  /*display: none;*/
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: -14px;
+  left: 4px;
+  background-color: #34404b;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 10px;
+  font-family: HarmoniaSansProCyr, Arial, sans-serif;
+  font-weight: 300;
 }
 .product {
   grid-column-start: 2;
@@ -123,7 +187,7 @@ div.big-product-img {
     font-family: HarmoniaSansProCyr, Arial, serif;
     color: #ff5912;
     font-weight: 900;
-    font-size: 52.15px;
+    font-size: 52px;
   }
   h3 {
     font-family: HarmoniaSansProCyr, Arial, serif;
@@ -136,7 +200,7 @@ div.big-product-img {
     line-height: 1.9;
     font-family: HarmoniaSansProCyr, Arial, serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: $font-size-regular;
     color: #495662;
     p {
       margin: 0;
@@ -281,7 +345,10 @@ div.big-product-img {
   }
 }
 @media (max-width: 560px) {
-  .wrapper{
+  * {
+    margin: 0;
+  }
+  .wrapper {
     justify-items: center;
   }
   .small-header {
@@ -293,11 +360,17 @@ div.big-product-img {
       padding-left: 0;
     }
   }
+  nav {
+    font-size: $font-size-regular - 2px;
+  }
   .capabilities {
     justify-self: center !important;
   }
   .product {
     grid-template-columns: min-content;
+    h2 {
+      font-size: 36px;
+    }
     .product-options {
       grid-template-columns: 1fr !important;
       justify-items: center !important;
@@ -305,10 +378,8 @@ div.big-product-img {
         justify-self: center !important;
       }
     }
-        .product-footer-line {
-      padding-top: 0; ////not working
-
-
+    .product-footer-line {
+      padding-top: 30px !important;
       grid-template-columns: 1fr !important;
       justify-items: center;
     }
